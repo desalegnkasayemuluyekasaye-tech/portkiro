@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-box">
+                    <div class="profile-image">
+                        <img src="dkk.jpg" alt="Desalegn Profile">
+                    </div>
+                    <div class="hero-text">
+                        <h1>Hi, I'm <span class="highlight animated-name">Desalegn</span></h1>
+                        <p class="subtitle animated-field">I am a Developer and Network Designer</p>
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-box">
+                <button class="toggle-button" onclick="toggleSection('about-content')">Read More</button>
+                <div class="about-content section-content" id="about-content">
+                    <div class="about-text">
+                        <h3>Education & Background</h3>
+                        <p>I hold a Bachelor's degree in Computer Science and a Master's degree in Cyber Security, which has provided me with a comprehensive understanding of both software development and information security principles.</p>
+                        
+                        <h3>Professional Focus</h3>
+                        <p>As a Developer and Network Designer, I specialize in creating robust software solutions and designing secure, efficient network infrastructures. My work combines practical development skills with strategic network architecture to deliver comprehensive technology solutions.</p>
+                        
+                        <h3>Expertise Areas</h3>
+                        <p>My expertise includes software development, network design and implementation, security architecture, and system integration. I'm passionate about building scalable applications and designing network systems that are both secure and performant.</p>
+                        
+                        <h3>Approach</h3>
+                        <p>I believe in creating solutions that balance functionality, security, and efficiency. Whether developing applications or designing network infrastructures, I focus on delivering reliable systems that meet real-world needs while maintaining best practices in security and performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-box">
+                <button class="toggle-button" onclick="toggleSection('skills-content')">View Skills</button>
+                <div class="skills-buttons section-content" id="skills-content">
+                    <div class="skill-row">
+                        <button class="skill-btn category-btn" onclick="toggleSkillDetails(event, 'database-skills')">
+                            Database
+                            <span class="skill-arrow">▼</span>
+                        </button>
+                        <div class="skill-details" id="database-skills">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-row">
+                        <button class="skill-btn category-btn" onclick="toggleSkillDetails(event, 'frontend-skills')">
+                            Frontend
+                            <span class="skill-arrow">▼</span>
+                        </button>
+                        <div class="skill-details" id="frontend-skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-row">
+                        <button class="skill-btn category-btn" onclick="toggleSkillDetails(event, 'backend-skills')">
+                            Backend
+                            <span class="skill-arrow">▼</span>
+                        </button>
+                        <div class="skill-details" id="backend-skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-row">
+                        <button class="skill-btn category-btn" onclick="toggleSkillDetails(event, 'class-skills')">
+                            Class Courses
+                            <span class="skill-arrow">▼</span>
+                        </button>
+                        <div class="skill-details" id="class-skills">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Graphics</span>
+                            <span class="skill-tag">Video Editing</span>
+                            <span class="skill-tag">Cisco (Networking)</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-box">
+                <button class="toggle-button" onclick="toggleSection('projects-content')">View Projects</button>
+                <div class="projects-grid section-content" id="projects-content">
+                    <div class="project-card">
+                        <h3>Web Application Development</h3>
+                        <p>Full-stack web applications with responsive design and modern user interfaces.</p>
+                        <div class="project-tags">
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                            <span>Database</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Network Infrastructure Design</h3>
+                        <p>Enterprise network architecture with secure and scalable infrastructure solutions.</p>
+                        <div class="project-tags">
+                            <span>Network Design</span>
+                            <span>Security</span>
+                            <span>Infrastructure</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>System Integration</h3>
+                        <p>Integration of software systems with network infrastructure for seamless operations.</p>
+                        <div class="project-tags">
+                            <span>Integration</span>
+                            <span>Automation</span>
+                            <span>Optimization</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ADD NEW PROJECTS HERE -->
+                    <!-- Copy the template below and paste it above this comment:
+                    
+                    <div class="project-card">
+                        <h3>Your Project Title</h3>
+                        <p>Your project description here.</p>
+                        <div class="project-tags">
+                            <span>Technology1</span>
+                            <span>Technology2</span>
+                            <span>Technology3</span>
+                        </div>
+                    </div>
+                    
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-box">
+                <p style="text-align: center; margin-bottom: 2rem;">Fill out the form below to send me a message!</p>
+                <form class="contact-form" id="contactForm">
+                    <input type="hidden" name="access_key" value="a23e98e9-e3fa-46f5-b13b-0af2790e01db">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <input type="hidden" name="redirect" value="false">
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div id="result" style="text-align: center; margin-top: 1rem; font-size: 1.1rem;"></div>
+                <p style="text-align: center; margin-top: 1.5rem; color: #6b7280;">
+                    Or email me directly at: <a href="mailto:desalegnky827@gmail.com" style="color: var(--primary-color); text-decoration: none;">desalegnky827@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:desalegnky827@gmail.com" title="Email: desalegnky827@gmail.com" aria-label="Email">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/dk-cs-3rd" target="_blank" rel="noopener noreferrer" title="LinkedIn: linkedin.com/in/dk-cs-3rd" aria-label="LinkedIn">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/desalegn-tech" target="_blank" rel="noopener noreferrer" title="GitHub: github.com/desalegn-tech" aria-label="GitHub">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/Ds35kg" target="_blank" rel="noopener noreferrer" title="Telegram: @Ds35kg" aria-label="Telegram">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>&copy; 2024 Desalegn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
