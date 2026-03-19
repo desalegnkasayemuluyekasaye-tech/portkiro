@@ -107,7 +107,112 @@ function toggleSkillDetails(event, detailsId) {
     event.stopPropagation();
     const button = event.currentTarget;
     const details = document.getElementById(detailsId);
-    
+
     button.classList.toggle('active');
     details.classList.toggle('active');
 }
+
+// Case Study Data
+const caseStudies = {
+    'web-app-case': {
+        title: 'Web Application Development',
+        challenge: 'Developed a fully responsive web application with modern UI/UX principles.',
+        solution: 'Built using React for frontend, Node.js and Express for backend, with PostgreSQL database. Implemented real-time updates and optimized performance.',
+        results: 'Achieved 95% Lighthouse score, 2.5s load time, and 98% uptime.'
+    },
+    'network-case': {
+        title: 'Network Infrastructure Design',
+        challenge: 'Design secure enterprise network architecture for multi-site deployment.',
+        solution: 'Implemented VLAN segmentation, firewall policies, and redundant connections with failover mechanisms.',
+        results: 'Improved network reliability to 99.9%, reduced latency by 40%, enhanced security posture significantly.'
+    },
+    'integration-case': {
+        title: 'System Integration',
+        challenge: 'Integrate disparate systems and automate data flows across departments.',
+        solution: 'Created middleware layer with API integrations, established data synchronization protocols, and built monitoring dashboards.',
+        results: 'Reduced manual tasks by 85%, improved data accuracy to 99.8%, saved 200+ hours annually.'
+    }
+};
+
+// Show case study modal
+function showCaseStudy(caseId) {
+    const modal = document.getElementById('caseStudyModal');
+    const body = document.getElementById('caseStudyBody');
+    const study = caseStudies[caseId];
+
+    if (study) {
+        body.innerHTML = `
+            <h2>${study.title}</h2>
+            <div class="case-study-section">
+                <h3>Challenge</h3>
+                <p>${study.challenge}</p>
+            </div>
+            <div class="case-study-section">
+                <h3>Solution</h3>
+                <p>${study.solution}</p>
+            </div>
+            <div class="case-study-section">
+                <h3>Results</h3>
+                <p>${study.results}</p>
+            </div>
+        `;
+        modal.style.display = 'block';
+    }
+}
+
+// Close case study modal
+function closeCaseStudy() {
+    const modal = document.getElementById('caseStudyModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('caseStudyModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Dark mode toggle
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+// Check for saved dark mode preference
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+});
+
+// Download resume
+function downloadResume(event) {
+    event.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'data:text/plain;base64,UEsDBBQABgAIAAAAIQBkzb8+PAAAAA4AAAAIAAAAUkVBRE1FLnR4dCtJLS9VKMsvTi2pBAAQ//8DAFBLAQIUAxQABgAIAAAAIQBkzb8+PAAAAA4AAAAIAAAAAAAAAAAAAIBBAAAAUkVBRE1FLnR4dFBLBQYAAAAAAQABACYAAABcAAAAACg=';
+    link.download = 'Desalegn_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Add case study styles
+const style = document.createElement('style');
+style.textContent = `
+    .case-study-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .case-study-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .case-study-section p {
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+`;
+document.head.appendChild(style);

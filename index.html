@@ -69,6 +69,96 @@
         </div>
     </section>
 
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-box">
+                <button class="toggle-button" onclick="toggleSection('experience-content')">View Timeline</button>
+                <div class="experience-timeline section-content" id="experience-content">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Senior Developer</h3>
+                            <p class="timeline-date">2023 - Present</p>
+                            <p>Leading full-stack development projects, mentoring junior developers, and architecting scalable solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Network Infrastructure Engineer</h3>
+                            <p class="timeline-date">2021 - 2023</p>
+                            <p>Designed and implemented enterprise-level network infrastructure with focus on security and performance optimization.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Full Stack Developer</h3>
+                            <p class="timeline-date">2019 - 2021</p>
+                            <p>Developed responsive web applications using modern frameworks, integrated databases, and deployed solutions to production.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>Certificates & Achievements</h2>
+            <div class="certificates-box">
+                <button class="toggle-button" onclick="toggleSection('certificates-content')">View Certificates</button>
+                <div class="certificates-grid section-content" id="certificates-content">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 4.5a10 10 0 0 1-18.8 4.2"/>
+                                <polyline points="2 4.5 2.5 2 4.5 2"/>
+                                <polyline points="22 19.5 21.5 22 19.5 22"/>
+                            </svg>
+                        </div>
+                        <h3>Master's Degree - Cyber Security</h3>
+                        <p>Advanced studies in cybersecurity, threat analysis, and security infrastructure design.</p>
+                        <span class="cert-date">2020</span>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 4.5a10 10 0 0 1-18.8 4.2"/>
+                                <polyline points="2 4.5 2.5 2 4.5 2"/>
+                                <polyline points="22 19.5 21.5 22 19.5 22"/>
+                            </svg>
+                        </div>
+                        <h3>Bachelor's Degree - Computer Science</h3>
+                        <p>Comprehensive education in software development, algorithms, and system design principles.</p>
+                        <span class="cert-date">2018</span>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26H22L17.55 12.76L19.64 19.26L12 14.76L4.36 19.26L6.45 12.76L2 8.26H8.91L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Cisco Certified Network Associate (CCNA)</h3>
+                        <p>Professional certification in enterprise network architecture and routing protocols.</p>
+                        <span class="cert-date">2021</span>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26H22L17.55 12.76L19.64 19.26L12 14.76L4.36 19.26L6.45 12.76L2 8.26H8.91L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>AWS Solutions Architect Associate</h3>
+                        <p>Certification for designing and deploying scalable, secure, and reliable applications on AWS.</p>
+                        <span class="cert-date">2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="skills">
         <div class="container">
             <h2>Skills</h2>
@@ -81,8 +171,18 @@
                             <span class="skill-arrow">▼</span>
                         </button>
                         <div class="skill-details" id="database-skills">
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">PostgreSQL</span>
+                            <div class="skill-level">
+                                <span class="skill-tag">MongoDB</span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">PostgreSQL</span>
+                                <div class="proficiency-bar">
+                                    <div class="proficiency-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -92,12 +192,30 @@
                             <span class="skill-arrow">▼</span>
                         </button>
                         <div class="skill-details" id="frontend-skills">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
+                            <div class="skill-level">
+                                <span class="skill-tag">HTML</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 95%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">CSS</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 92%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">JavaScript</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">React</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">Git</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">GitHub</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 90%"></div></div>
+                            </div>
                         </div>
                     </div>
                     
@@ -107,9 +225,18 @@
                             <span class="skill-arrow">▼</span>
                         </button>
                         <div class="skill-details" id="backend-skills">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express</span>
-                            <span class="skill-tag">AI</span>
+                            <div class="skill-level">
+                                <span class="skill-tag">Node.js</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 87%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">Express</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">AI</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 78%"></div></div>
+                            </div>
                         </div>
                     </div>
                     
@@ -119,14 +246,30 @@
                             <span class="skill-arrow">▼</span>
                         </button>
                         <div class="skill-details" id="class-skills">
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">Graphics</span>
-                            <span class="skill-tag">Video Editing</span>
-                            <span class="skill-tag">Cisco (Networking)</span>
-                            <span class="skill-tag">Algorithms</span>
+                            <div class="skill-level">
+                                <span class="skill-tag">PHP</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">Java</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 82%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">C++</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">MySQL</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">Cisco Networking</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 86%"></div></div>
+                            </div>
+                            <div class="skill-level">
+                                <span class="skill-tag">Algorithms</span>
+                                <div class="proficiency-bar"><div class="proficiency-fill" style="width: 89%"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,6 +296,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/desalegn-tech" target="_blank" class="project-link">View Code</a>
+                            <button class="project-link case-study-btn" onclick="showCaseStudy('web-app-case')">Case Study</button>
                         </div>
                     </div>
                     <div class="project-card">
@@ -168,6 +312,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/desalegn-tech" target="_blank" class="project-link">Learn More</a>
+                            <button class="project-link case-study-btn" onclick="showCaseStudy('network-case')">Case Study</button>
                         </div>
                     </div>
                     <div class="project-card">
@@ -183,6 +328,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/desalegn-tech" target="_blank" class="project-link">View Project</a>
+                            <button class="project-link case-study-btn" onclick="showCaseStudy('integration-case')">Case Study</button>
                         </div>
                     </div>
                     
@@ -225,6 +371,33 @@
             </div>
         </div>
     </section>
+
+    <div id="caseStudyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCaseStudy()">&times;</span>
+            <div id="caseStudyBody"></div>
+        </div>
+    </div>
+
+    <div class="resume-download">
+        <a href="#resume" class="resume-btn" onclick="downloadResume(event)">Download Resume (PDF)</a>
+    </div>
+
+    <div id="darkModeToggle" class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
 
     <footer>
         <div class="container">
